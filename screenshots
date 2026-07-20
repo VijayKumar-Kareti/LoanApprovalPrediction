@@ -1,0 +1,9 @@
+The screenshots directory is intended to be empty for now, as it will contain images that you will add later. Therefore, the contents of the file will indicate that it is intentionally left blank.
+
+Please create the directory structure as follows:
+
+LoanApprovalPrediction/screenshots/
+
+And save the following content in the file:
+
+# This directory is intentionally left blank. It will contain screenshots of the application for documentation purposes.

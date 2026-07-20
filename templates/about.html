@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="container py-5">
+    <div class="row align-items-center">
+        <div class="col-lg-7">
+            <h2 class="fw-bold">About Loan Approval Prediction System</h2>
+            <p class="text-secondary">
+                This banking-inspired web application predicts loan approval outcomes using a trained machine learning
+                pipeline. It is designed to look like a real underwriting portal, with transparent reasoning, responsive
+                display behavior, and professional visual styling.
+            </p>
+            <h5 class="mt-4">Key capabilities</h5>
+            <ul class="text-secondary">
+                <li>Preprocesses user inputs and categorical banking data.</li>
+                <li>Compares multiple classifiers and selects the best-performing model.</li>
+                <li>Shows probability, confidence score, and explanation.</li>
+                <li>Works with common banking fields like credit history, property area and loan term.</li>
+            </ul>
+        </div>
+        <div class="col-lg-5">
+            <div class="card shadow-sm border-0 about-card">
+                <div class="card-body">
+                    <h5 class="card-title">Technology Stack</h5>
+                    <p class="card-text text-secondary">
+                        Flask | Bootstrap 5 | Python | Scikit-Learn | Pandas | Joblib
+                    </p>
+                    <hr />
+                    <h6>ML Models Compared</h6>
+                    <p class="text-secondary mb-1">Logistic Regression</p>
+                    <p class="text-secondary mb-1">Decision Tree</p>
+                    <p class="text-secondary mb-1">Random Forest</p>
+                    <p class="text-secondary mb-1">SVM</p>
+                    <p class="text-secondary mb-1">KNN</p>
+                    <p class="text-secondary">Gradient Boosting</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

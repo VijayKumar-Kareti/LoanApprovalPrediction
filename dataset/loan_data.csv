@@ -1,0 +1,11 @@
+Age,Gender,Marital Status,Education,Employment Type,Monthly Income,Co-applicant Income,Loan Amount,Loan Term,Credit History,Property Area,Dependents,Self Employed,Loan Status
+25,Male,Single,Graduate,Self-employed,5000,0,200000,12,1,Urban,0,No,Approved
+30,Female,Married,Graduate,Employed,6000,2000,150000,24,1,Urban,1,No,Approved
+35,Male,Married,Graduate,Employed,7000,3000,250000,36,1,Rural,2,No,Approved
+28,Female,Single,Graduate,Employed,4000,0,100000,12,0,Urban,0,No,Rejected
+40,Male,Married,Not Graduate,Self-employed,8000,5000,300000,60,1,Urban,1,Yes,Approved
+45,Female,Married,Graduate,Employed,9000,4000,400000,60,1,Rural,3,No,Approved
+50,Male,Single,Graduate,Self-employed,3000,0,50000,12,0,Urban,0,No,Rejected
+33,Female,Married,Graduate,Employed,12000,6000,350000,36,1,Urban,2,No,Approved
+29,Male,Single,Graduate,Employed,4500,1500,120000,24,1,Rural,1,No,Rejected
+38,Female,Married,Graduate,Self-employed,11000,7000,600000,60,1,Urban,2,Yes,Approved

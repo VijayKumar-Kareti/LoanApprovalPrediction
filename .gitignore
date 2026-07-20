@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# Data / models (exclude heavy binaries; remove if you want to track models)
+model.pkl
+*.pkl
+
+# OneDrive temp files
+~$*
+
+# Jupyter
+.ipynb_checkpoints/

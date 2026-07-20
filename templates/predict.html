@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="container py-5">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Loan Application Predictor</h2>
+        <p class="text-secondary mx-auto" style="max-width: 700px;">
+            Fill out the borrower profile and receive a data-driven decision along with probability and reasoning.
+        </p>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body">
+            <form id="loan-form" action="{{ url_for('predict') }}" method="post">
+                <div class="row gy-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Age</label>
+                        <input name="Age" type="number" class="form-control" placeholder="Enter age" min="18" max="70" required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Gender</label>
+                        <select name="Gender" class="form-select" required>
+                            <option value="">Select gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Marital Status</label>
+                        <select name="MaritalStatus" class="form-select" required>
+                            <option value="">Select status</option>
+                            <option>Single</option>
+                            <option>Married</option>
+                            <option>Divorced</option>
+                            <option>Widowed</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Education</label>
+                        <select name="Education" class="form-select" required>
+                            <option value="">Select education</option>
+                            <option>Graduate</option>
+                            <option>Not Graduate</option>
+                            <option>Postgraduate</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Employment Type</label>
+                        <select name="EmploymentType" class="form-select" required>
+                            <option value="">Select employment</option>
+                            <option>Salaried</option>
+                            <option>Self Employed</option>
+                            <option>Freelancer</option>
+                            <option>Business</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Self Employed</label>
+                        <select name="SelfEmployed" class="form-select" required>
+                            <option value="">Select option</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Monthly Income</label>
+                        <input name="MonthlyIncome" type="number" class="form-control" placeholder="Salary" min="0" required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Co-applicant Income</label>
+                        <input name="CoapplicantIncome" type="number" class="form-control" placeholder="Co-applicant income" min="0" required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Loan Amount</label>
+                        <input name="LoanAmount" type="number" class="form-control" placeholder="Loan amount" min="0" required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Loan Term (months)</label>
+                        <input name="LoanTerm" type="number" class="form-control" placeholder="e.g. 360" min="12" required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Credit History</label>
+                        <select name="CreditHistory" class="form-select" required>
+                            <option value="">Select credit history</option>
+                            <option value="1">Good</option>
+                            <option value="0">Poor</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Property Area</label>
+                        <select name="PropertyArea" class="form-select" required>
+                            <option value="">Select area</option>
+                            <option>Urban</option>
+                            <option>Semiurban</option>
+                            <option>Rural</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Dependents</label>
+                        <select name="Dependents" class="form-select" required>
+                            <option value="">Select count</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mt-4 d-flex flex-wrap gap-2">
+                    <button type="submit" class="btn btn-primary">Predict Loan Status</button>
+                    <button type="reset" class="btn btn-outline-secondary">Reset Form</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

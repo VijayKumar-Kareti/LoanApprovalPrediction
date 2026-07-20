@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero bg-soft-blue text-dark py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold">Banking-grade Loan Approval Prediction</h1>
+                <p class="lead text-secondary">
+                    Predict whether a loan application will be approved or rejected using
+                    realistic financial features, data-driven insights, and explainable AI.
+                </p>
+                <a class="btn btn-primary btn-lg me-2" href="{{ url_for('predict') }}">Start Prediction</a>
+                <a class="btn btn-outline-primary btn-lg" href="{{ url_for('about') }}">About Project</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="card shadow-sm border-0 hero-card">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Loan Application Snapshot</h5>
+                        <ul class="list-unstyled">
+                            <li><strong>Age</strong> – Applicant age</li>
+                            <li><strong>Income</strong> – Monthly salary and co-applicant support</li>
+                            <li><strong>Credit History</strong> – Banking records and reliability</li>
+                            <li><strong>Loan Amount</strong> – Requested loan with term</li>
+                        </ul>
+                        <p class="text-muted small">
+                            Built with Flask, Scikit-Learn, Bootstrap and explainable prediction logic.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Why this system matters</h2>
+        <p class="text-secondary mx-auto" style="max-width: 680px;">
+            Create a reliable banking interface for loan underwriting decisions, with a polished UI,
+            business-friendly terminology, and transparent reasoning for every prediction.
+        </p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="feature-card card shadow-sm border-0">
+                <div class="card-body">
+                    <h5>Realistic banking inputs</h5>
+                    <p class="text-muted">
+                        Enter meaningful borrower data such as employment type, property area and credit history.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card card shadow-sm border-0">
+                <div class="card-body">
+                    <h5>Explainable decisions</h5>
+                    <p class="text-muted">
+                        The app returns an approval outcome plus the main reasons behind the model decision.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card card shadow-sm border-0">
+                <div class="card-body">
+                    <h5>Responsive banking UX</h5>
+                    <p class="text-muted">
+                        Mobile-ready layout with polished cards, navigation and custom dashboard-style visuals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

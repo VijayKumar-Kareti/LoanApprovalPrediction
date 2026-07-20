@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="container py-5">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Prediction Result</h2>
+        <p class="text-secondary mx-auto" style="max-width: 700px;">
+            The system provides an approval verdict, probability, confidence score, and a reason summary.
+        </p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm result-card border-0">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Loan Status</h5>
+                    <p class="display-6 fw-bold {{ 'text-success' if result.loan_status == 'Approved' else 'text-danger' }}">
+                        {{ result.loan_status }}
+                    </p>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="info-box p-3 mb-3">
+                                <h6>Probability</h6>
+                                <p class="fs-4 mb-0">{{ result.probability }}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box p-3 mb-3">
+                                <h6>Confidence score</h6>
+                                <p class="fs-4 mb-0">{{ result.confidence_score }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-light rounded">
+                        <h6>Reason</h6>
+                        <p class="mb-0">{{ result.reason }}</p>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="{{ url_for('predict') }}" class="btn btn-primary me-2">Predict Another</a>
+                        <a href="{{ url_for('home') }}" class="btn btn-outline-primary">Back Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
